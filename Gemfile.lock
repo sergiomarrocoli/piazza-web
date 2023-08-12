@@ -93,6 +93,8 @@ GEM
       activesupport (>= 5.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    i18n-debug (1.2.0)
+      i18n (< 2)
     importmap-rails (1.2.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -216,6 +218,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  i18n-debug
   importmap-rails
   jbuilder
   pg (~> 1.1)
