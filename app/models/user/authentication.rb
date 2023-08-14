@@ -3,6 +3,7 @@ module User::Authentication
   included do
     has_secure_password
     validates :password,
+      on: [:create, :password_change],
       presence: true,
       length: { minimum: 8 }
     has_many :app_sessions
