@@ -1,7 +1,14 @@
 require 'test_helper'
+
 class ApplicationHelperTest < ActionView::TestCase
+  setup do
+    @turbo_native_app = false
+  end
+
   test "formats page specific title" do
+    @turbo_native_app = true
     content_for(:title) { "Page Title" }
+
     assert_equal "Page Title | #{I18n.t('piazza')}", title
   end
 
